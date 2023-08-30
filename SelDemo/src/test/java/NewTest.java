@@ -29,9 +29,9 @@ public class NewTest {
   
   @BeforeTest
   public void beforeTest() {
-	  System.setProperty("webdriver.chrome.driver", "C:\\Users\\shivchou\\Desktop\\seldemo\\chromedriver.exe");
+	  System.setProperty("webdriver.chrome.driver", "C:\\Users\\kapdev\\.jenkins\\workspace\\mavenbuild\\SelDemo\\chromedriver.exe");
 	  webDriver =new ChromeDriver();
-	  webDriver.get("C:\\Users\\shivchou\\Desktop\\seldemo\\hello.html");
+	  webDriver.get("C:\\Users\\kapdev\\.jenkins\\workspace\\mavenbuild\\SelDemo\\hello.html");
   }
 
   @AfterTest
