@@ -1,42 +1,23 @@
-import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeTest;
+import org.junit.jupiter.api.Test;
 
-import static org.testng.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import java.sql.Driver;
+/**
+ * Unit test for simple App.
+ */
+public class AppTest
+{
+    @Test
+    public void testAppConstructor() {
+        App app1 = new App();
+        App app2 = new App();
+        assertEquals(app1.getMessage(), app2.getMessage());
+    }
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterTest;
-
-public class NewTest {
-	
-	WebDriver webDriver;
-	WebElement webElement;
-  @Test
-  public void chromeTest()
-  {
-	  String path="//*[@id=\"p\"]";
-	webElement=  webDriver.findElement(By.xpath(path));
-	String response=webElement.getText();
-	assertEquals("Hello world", response);
-  }
-  
-  
-  @BeforeTest
-  public void beforeTest() {
-	  System.setProperty("webdriver.chrome.driver", "C:\\Users\\kapdev\\.jenkins\\workspace\\mavenbuild\\SelDemo\\chromedriver.exe");
-	  webDriver =new ChromeDriver();
-	  webDriver.get("C:\\Users\\kapdev\\.jenkins\\workspace\\mavenbuild\\SelDemo\\hello.html");
-  }
-
-  @AfterTest
-  public void afterTest() {
-	 webDriver.close();
-  }
-
+    @Test
+    public void testAppMessage()
+    {
+        App app = new App();
+        assertEquals("Hello World!", app.getMessage());
+    }
 }
