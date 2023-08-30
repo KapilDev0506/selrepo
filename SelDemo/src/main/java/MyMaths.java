@@ -1,11 +1,11 @@
 /**
  * Hello world!
  */
-public class App {
+public class MyMaths {
 
     private static final String MESSAGE = "Hello World!";
 
-    public App() {}
+    public MyMaths() {}
 
     public static void main(String[] args) {
         System.out.println(MESSAGE);
